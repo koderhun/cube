@@ -1,0 +1,53 @@
+*
+    margin 0
+    padding 0
+
+.scene
+    perspective 200px
+    display flex
+    justify-content center
+    align-items center
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+
+.cube
+    display inline-block
+    position relative
+    width 50vw
+    height 50vh
+    transform-style preserve-3d
+    transition transform 1s ease
+    transform: translateZ(-25vh);
+    &:hover
+        transform: rotateX(90deg);
+
+.side
+    background-color: rgba(255, 0, 0, 0.5);
+    display flex
+    justify-content center
+    align-items center
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+
+.back
+    transform translateZ(-25vh)
+.left
+    transform translateX(-25vw) rotateY(90deg)
+    background rgba(0, 255, 0, 0.5)
+.right
+    transform translateX(25vw) rotateY(90deg)
+.top
+    transform translateY(-25vh) rotateX(90deg)
+    background rgba(100, 0, 0, .5);
+.bottom
+    transform translateY(26vh) rotateX(90deg)
+    background rgba(0, 0, 255, 0.5)
+.front
+    transform translateZ(25vh)
+    background rgba(0, 0, 255, 0.9)
