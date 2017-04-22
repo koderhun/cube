@@ -1,0 +1,26 @@
+.slide-control
+    position absolute
+    top 0
+    left 0
+    right 0
+    z-index 1
+    display flex
+    padding 15px
+    &__item
+        width 10vw
+        height 10vh
+        border 0
+        background-color gray
+        background-size cover
+        background-repeat no-repeat
+        background-position center
+        &_btn1
+            background-image url($img + '1.jpg')
+        &_btn2
+            background-image url($img + '2.jpg')
+        &_btn3
+            background-image url($img + '3.jpg')
+        &_btn4
+            background-image url($img + '4.jpg')
+        &+&
+            margin-left 15px

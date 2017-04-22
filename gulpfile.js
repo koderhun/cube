@@ -94,8 +94,8 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
     return gulp.src(path.js + '**/*.js')
     .pipe(dev(sourcemaps.init()))
-    .pipe(eslint())
-    .pipe(eslint.format())
+    // .pipe(eslint())
+    // .pipe(eslint.format())
     .pipe(babel({
         presets: ['es2015']
     }))
