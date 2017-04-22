@@ -16,14 +16,14 @@
 .cube {
   display: inline-block;
   position: relative;
-  width: 50vw;
-  height: 50vh;
+  width: 100vw;
+  height: 100vh;
   transform-style: preserve-3d;
   transition: transform 1s ease;
-  transform: translateZ(-25vh);
+  transform: translateZ(-50vh);
 }
 .cube:hover {
-  transform: rotateX(90deg);
+  transform: translateZ(-50vh) rotateX(90deg);
 }
 .side {
   background-color: rgba(255,0,0,0.5);
@@ -36,27 +36,40 @@
   left: 0;
   right: 0;
 }
+.side__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #808080;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .back {
-  transform: translateZ(-25vh);
+  transform: translateZ(50vh) rotateX(180deg);
 }
-.left {
-  transform: translateX(-25vw) rotateY(90deg);
-  background: rgba(0,255,0,0.5);
-}
-.right {
-  transform: translateX(25vw) rotateY(90deg);
+.back .side__img {
+  background-image: url("../images/1.jpg");
 }
 .top {
-  transform: translateY(-25vh) rotateX(90deg);
-  background: rgba(100,0,0,0.5);
+  transform: translateY(-50vh) rotateX(90deg);
+}
+.top .side__img {
+  background-image: url("../images/2.jpg");
 }
 .bottom {
-  transform: translateY(26vh) rotateX(90deg);
-  background: rgba(0,0,255,0.5);
+  transform: translateY(50vh) rotateX(270deg);
+}
+.bottom .side__img {
+  background-image: url("../images/3.jpg");
 }
 .front {
-  transform: translateZ(25vh);
-  background: rgba(0,0,255,0.9);
+  transform: translateZ(50vh);
+}
+.front .side__img {
+  background-image: url("../images/4.jpg");
 }
 
 /*# sourceMappingURL=app.css.map */

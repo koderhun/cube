@@ -1,3 +1,7 @@
+$cube-width = 100vw
+$cube-height = 100vh
+$cubeX = $cube-width/2
+$cubeY = $cube-height/2
 *
     margin 0
     padding 0
@@ -16,13 +20,13 @@
 .cube
     display inline-block
     position relative
-    width 50vw
-    height 50vh
+    width $cube-width
+    height $cube-height
     transform-style preserve-3d
     transition transform 1s ease
-    transform: translateZ(-25vh);
+    transform: translateZ(-($cubeY));
     &:hover
-        transform: rotateX(90deg);
+        transform: translateZ(-($cubeY)) rotateX(90deg);
 
 .side
     background-color: rgba(255, 0, 0, 0.5);
@@ -34,20 +38,34 @@
     bottom 0
     left 0
     right 0
+    &__img
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        background-color grey
+        background-repeat no-repeat
+        background-position center
+        background-size cover
 
 .back
-    transform translateZ(-25vh)
-.left
-    transform translateX(-25vw) rotateY(90deg)
-    background rgba(0, 255, 0, 0.5)
-.right
-    transform translateX(25vw) rotateY(90deg)
+    transform translateZ( $cubeY ) rotateX(180deg)
+    .side__img
+        background-image url($img + '1.jpg')
+// .left
+//     transform translateX(-25vw) rotateY(90deg)
+// .right
+//     transform translateX(25vw) rotateY(90deg)
 .top
-    transform translateY(-25vh) rotateX(90deg)
-    background rgba(100, 0, 0, .5);
+    transform translateY( -($cubeY) ) rotateX(90deg)
+    .side__img
+        background-image url($img + '2.jpg')
 .bottom
-    transform translateY(26vh) rotateX(90deg)
-    background rgba(0, 0, 255, 0.5)
+    transform translateY( $cubeY ) rotateX(270deg)
+    .side__img
+        background-image url($img + '3.jpg')
 .front
-    transform translateZ(25vh)
-    background rgba(0, 0, 255, 0.9)
+    transform translateZ( $cubeY )
+    .side__img
+        background-image url($img + '4.jpg')
