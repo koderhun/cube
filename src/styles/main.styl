@@ -26,11 +26,13 @@ $cubeY = $cube-height/2
     transition transform 1s ease
     transform: translateZ(-($cubeY));
     &_btn1
-        transform: translateZ(-($cubeY)) rotateX(0deg);
+        transform translateZ(-($cubeY)) rotateX(0deg)
     &_btn2
-        transform: translateZ(-($cubeY)) rotateX(90deg);
+        transform translateZ(-($cubeY)) rotateX(90deg)
     &_btn3
-        transform: translateZ(-($cubeY)) rotateX(180deg);
+        transform translateZ(-($cubeY)) rotateX(270deg)
+    &_btn4
+        transform translateZ($cubeY) rotateX(180deg)
 .side
     background-color: rgba(255, 0, 0, 0.5);
     display flex

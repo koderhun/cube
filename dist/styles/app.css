@@ -62,7 +62,10 @@
   transform: translateZ(-50vh) rotateX(90deg);
 }
 .cube_btn3 {
-  transform: translateZ(-50vh) rotateX(180deg);
+  transform: translateZ(-50vh) rotateX(270deg);
+}
+.cube_btn4 {
+  transform: translateZ(50vh) rotateX(180deg);
 }
 .side {
   background-color: rgba(255,0,0,0.5);
