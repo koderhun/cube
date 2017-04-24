@@ -2,9 +2,13 @@ $cube-width = 100vw
 $cube-height = 100vh
 $cubeX = $cube-width/2
 $cubeY = $cube-height/2
+
 *
     margin 0
     padding 0
+
+body, html
+    overflow hidden
 
 .scene
     perspective 100vh
@@ -16,6 +20,7 @@ $cubeY = $cube-height/2
     bottom 0
     left 0
     right 0
+    overflow hidden
 
 .cube
     display inline-block
