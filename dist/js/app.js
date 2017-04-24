@@ -8,14 +8,14 @@ for (var i = 0; i < $btn.length; i++) {
     $btn[i].addEventListener('click', function (event) {
         console.log('test');
         $cube.classList.value = 'cube';
-        if (this.classList.contains('slide-control__item_btn1')) {
-            $cube.classList.add('cube_btn1');
-        } else if (this.classList.contains('slide-control__item_btn2')) {
-            $cube.classList.add('cube_btn2');
-        } else if (this.classList.contains('slide-control__item_btn3')) {
-            $cube.classList.add('cube_btn3');
-        } else if (this.classList.contains('slide-control__item_btn4')) {
-            $cube.classList.add('cube_btn4');
+        if (this.classList.contains('slide-control__item_back')) {
+            $cube.classList.add('cube_back');
+        } else if (this.classList.contains('slide-control__item_top')) {
+            $cube.classList.add('cube_top');
+        } else if (this.classList.contains('slide-control__item_bottom')) {
+            $cube.classList.add('cube_bottom');
+        } else if (this.classList.contains('slide-control__item_front')) {
+            $cube.classList.add('cube_front');
         }
         return false;
     });

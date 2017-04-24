@@ -16,17 +16,17 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.slide-control__item_btn1 {
-  background-image: url("../images/1.jpg");
+.slide-control__item_back {
+  background-image: url("../images/back.jpg");
 }
-.slide-control__item_btn2 {
-  background-image: url("../images/2.jpg");
+.slide-control__item_top {
+  background-image: url("../images/top.jpg");
 }
-.slide-control__item_btn3 {
-  background-image: url("../images/3.jpg");
+.slide-control__item_bottom {
+  background-image: url("../images/bottom.jpg");
 }
-.slide-control__item_btn4 {
-  background-image: url("../images/4.jpg");
+.slide-control__item_front {
+  background-image: url("../images/front.jpg");
 }
 .slide-control__item+.slide-control__item {
   margin-left: 15px;
@@ -36,7 +36,7 @@
   padding: 0;
 }
 .scene {
-  perspective: 200px;
+  perspective: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,17 +55,17 @@
   transition: transform 1s ease;
   transform: translateZ(-50vh);
 }
-.cube_btn1 {
+.cube_front {
   transform: translateZ(-50vh) rotateX(0deg);
 }
-.cube_btn2 {
+.cube_bottom {
   transform: translateZ(-50vh) rotateX(90deg);
 }
-.cube_btn3 {
-  transform: translateZ(-50vh) rotateX(270deg);
+.cube_back {
+  transform: translateZ(-50vh) rotateX(180deg);
 }
-.cube_btn4 {
-  transform: translateZ(50vh) rotateX(180deg);
+.cube_top {
+  transform: translateZ(-50vh) rotateX(270deg);
 }
 .side {
   background-color: rgba(255,0,0,0.5);
@@ -90,28 +90,28 @@
   background-size: cover;
 }
 .back {
-  transform: translateZ(50vh) rotateX(180deg);
+  transform: translateZ(-50vh) rotateX(180deg);
 }
 .back .side__img {
-  background-image: url("../images/4.jpg");
+  background-image: url("../images/back.jpg");
 }
 .top {
   transform: translateY(-50vh) rotateX(90deg);
 }
 .top .side__img {
-  background-image: url("../images/3.jpg");
+  background-image: url("../images/top.jpg");
 }
 .bottom {
   transform: translateY(50vh) rotateX(270deg);
 }
 .bottom .side__img {
-  background-image: url("../images/2.jpg");
+  background-image: url("../images/bottom.jpg");
 }
 .front {
   transform: translateZ(50vh);
 }
 .front .side__img {
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/front.jpg");
 }
 
 /*# sourceMappingURL=app.css.map */

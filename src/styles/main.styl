@@ -7,7 +7,7 @@ $cubeY = $cube-height/2
     padding 0
 
 .scene
-    perspective 200px
+    perspective 100vh
     display flex
     justify-content center
     align-items center
@@ -25,14 +25,14 @@ $cubeY = $cube-height/2
     transform-style preserve-3d
     transition transform 1s ease
     transform: translateZ(-($cubeY));
-    &_btn1
+    &_front
         transform translateZ(-($cubeY)) rotateX(0deg)
-    &_btn2
+    &_bottom
         transform translateZ(-($cubeY)) rotateX(90deg)
-    &_btn3
+    &_back
+        transform translateZ(-($cubeY)) rotateX(180deg)
+    &_top
         transform translateZ(-($cubeY)) rotateX(270deg)
-    &_btn4
-        transform translateZ($cubeY) rotateX(180deg)
 .side
     background-color: rgba(255, 0, 0, 0.5);
     display flex
@@ -59,18 +59,18 @@ $cubeY = $cube-height/2
 // .right
 //     transform translateX(25vw) rotateY(90deg)
 .back
-    transform translateZ( $cubeY ) rotateX(180deg)
+    transform translateZ( -($cubeY) ) rotateX(180deg)
     .side__img
-        background-image url($img + '4.jpg')
+        background-image url($img + 'back.jpg')
 .top
     transform translateY( -($cubeY) ) rotateX(90deg)
     .side__img
-        background-image url($img + '3.jpg')
+        background-image url($img + 'top.jpg')
 .bottom
     transform translateY( $cubeY ) rotateX(270deg)
     .side__img
-        background-image url($img + '2.jpg')
+        background-image url($img + 'bottom.jpg')
 .front
     transform translateZ( $cubeY )
     .side__img
-        background-image url($img + '1.jpg')
+        background-image url($img + 'front.jpg')
